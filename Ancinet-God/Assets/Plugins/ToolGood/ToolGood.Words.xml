@@ -1,0 +1,1014 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ToolGood.Words</name>
+    </assembly>
+    <members>
+        <member name="M:ToolGood.Words.internals.BaseMatch.SetKeywords(System.Collections.Generic.ICollection{System.String})">
+            <summary>
+            设置关键字
+            </summary>
+            <param name="keywords">关键字列表</param>
+        </member>
+        <member name="M:ToolGood.Words.internals.BaseMatchEx.Save(System.String)">
+            <summary>
+            保存到文件
+            </summary>
+            <param name="filePath"></param>
+        </member>
+        <member name="M:ToolGood.Words.internals.BaseMatchEx.Save(System.IO.Stream)">
+            <summary>
+            保存到Stream
+            </summary>
+            <param name="stream"></param>
+        </member>
+        <member name="M:ToolGood.Words.internals.BaseMatchEx.Load(System.String)">
+            <summary>
+            加载文件
+            </summary>
+            <param name="filePath"></param>
+        </member>
+        <member name="M:ToolGood.Words.internals.BaseMatchEx.Load(System.IO.Stream)">
+            <summary>
+            加载Stream
+            </summary>
+            <param name="stream"></param>
+        </member>
+        <member name="M:ToolGood.Words.internals.BasePinyinMatch.SplitKeywords(System.String)">
+            <summary>
+            初步分割
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ToolGood.Words.internals.BaseSearch.SetKeywords(System.Collections.Generic.ICollection{System.String})">
+            <summary>
+            设置关键字
+            </summary>
+            <param name="keywords">关键字列表</param>
+        </member>
+        <member name="M:ToolGood.Words.internals.BaseSearchEx.SetKeywords(System.Collections.Generic.ICollection{System.String})">
+            <summary>
+            设置关键字
+            </summary>
+            <param name="keywords">关键字列表</param>
+        </member>
+        <member name="M:ToolGood.Words.internals.BaseSearchEx.Save(System.String)">
+            <summary>
+            保存到文件
+            </summary>
+            <param name="filePath"></param>
+        </member>
+        <member name="M:ToolGood.Words.internals.BaseSearchEx.Save(System.IO.Stream)">
+            <summary>
+            保存到Stream
+            </summary>
+            <param name="stream"></param>
+        </member>
+        <member name="M:ToolGood.Words.internals.BaseSearchEx.Load(System.String)">
+            <summary>
+            加载文件
+            </summary>
+            <param name="filePath"></param>
+        </member>
+        <member name="M:ToolGood.Words.internals.BaseSearchEx.Load(System.IO.Stream)">
+            <summary>
+            加载Stream
+            </summary>
+            <param name="stream"></param>
+        </member>
+        <member name="M:ToolGood.Words.internals.BaseSearchEx2.Save(System.String)">
+            <summary>
+            保存到文件
+            </summary>
+            <param name="filePath"></param>
+        </member>
+        <member name="M:ToolGood.Words.internals.BaseSearchEx2.Save(System.IO.Stream)">
+            <summary>
+            保存到Stream
+            </summary>
+            <param name="stream"></param>
+        </member>
+        <member name="M:ToolGood.Words.internals.BaseSearchEx2.Load(System.String)">
+            <summary>
+            加载文件
+            </summary>
+            <param name="filePath"></param>
+        </member>
+        <member name="M:ToolGood.Words.internals.BaseSearchEx2.Load(System.IO.Stream)">
+            <summary>
+            加载Stream
+            </summary>
+            <param name="stream"></param>
+        </member>
+        <member name="M:ToolGood.Words.internals.BaseSearchEx2.SetKeywords(System.Collections.Generic.ICollection{System.String})">
+            <summary>
+            设置关键字
+            </summary>
+            <param name="keywords">关键字列表</param>
+        </member>
+        <member name="M:ToolGood.Words.internals.Translate.ToTraditionalChinese(System.String,System.Int32)">
+            <summary>
+            转繁体中文
+            </summary>
+            <param name="text"></param>
+            <param name="type">0、繁体中文，1、港澳繁体，2、台湾正体 </param>
+            <returns></returns>
+        </member>
+        <member name="M:ToolGood.Words.internals.Translate.ToSimplifiedChinese(System.String,System.Int32)">
+            <summary>
+            转简体中文
+            </summary>
+            <param name="text"></param>
+            <param name="srcType">0、繁体中文，1、港澳繁体，2、台湾正体</param>
+            <returns></returns>
+        </member>
+        <member name="M:ToolGood.Words.NumberConventer.HandlePart(System.String)">
+            <summary>
+            处理亿以下内容。
+            </summary>
+            <param name="num"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ToolGood.Words.NumberConventer.GetArabDotPart(System.String)">
+            <summary>
+            取得阿拉伯数字小数部分。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ToolGood.Words.NumberConventer.switchNum(System.String)">
+            <summary>
+            取得汉字对应的阿拉伯数字
+            </summary>
+            <param name="n"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ToolGood.Words.PinyinMatch">
+            <summary>
+            拼音匹配, 不支持[0x20000-0x2B81D]
+            </summary>
+        </member>
+        <member name="M:ToolGood.Words.PinyinMatch.SetKeywords(System.Collections.Generic.ICollection{System.String})">
+            <summary>
+            设置关键字，注：索引会被清空
+            </summary>
+            <param name="keywords"></param>
+        </member>
+        <member name="M:ToolGood.Words.PinyinMatch.SetKeywords(System.Collections.Generic.IList{System.String},System.Collections.Generic.IList{System.String},System.Char)">
+            <summary>
+            设置关键字，注：索引会被清空
+            </summary>
+            <param name="keywords"></param>
+            <param name="pinyin"></param>
+            <param name="splitChar"></param>
+        </member>
+        <member name="M:ToolGood.Words.PinyinMatch.SetIndexs(System.Collections.Generic.ICollection{System.Int32})">
+            <summary>
+            设置索引 ,请保证关键字与索引一一对应
+            </summary>
+            <param name="indexs"></param>
+        </member>
+        <member name="M:ToolGood.Words.PinyinMatch.AddIndex(System.Int32)">
+            <summary>
+            添加索引 ,请保证关键字与索引一一对应
+            </summary>
+            <param name="index"></param>
+        </member>
+        <member name="M:ToolGood.Words.PinyinMatch.AddKeyword(System.String)">
+            <summary>
+            添加关键字
+            </summary>
+            <param name="keyword">关键字</param>
+        </member>
+        <member name="M:ToolGood.Words.PinyinMatch.AddKeyword(System.String,System.String,System.Char)">
+            <summary>
+            添加关键字
+            </summary>
+            <param name="keyword">关键字</param>
+            <param name="pinyin">拼音</param>
+            <param name="splitChar">分割符</param>
+        </member>
+        <member name="M:ToolGood.Words.PinyinMatch.Find(System.String)">
+            <summary>
+            查询, 已知bug  key 不能太长
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ToolGood.Words.PinyinMatch.FindIndex(System.String)">
+            <summary>
+            查询索引号 , 已知bug  keywords 不能太长
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ToolGood.Words.PinyinMatch.FindWithSpace(System.String)">
+            <summary>
+            查询，空格为通配符 , 已知bug  keywords 不能太长
+            </summary>
+            <param name="keywords"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ToolGood.Words.PinyinMatch.FindIndexWithSpace(System.String)">
+            <summary>
+            查询索引号，空格为通配符 , 已知bug  key 不能太长
+            </summary>
+            <param name="keywords"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ToolGood.Words.PinyinMatch`1">
+            <summary>
+            拼音匹配, 不支持[0x20000-0x2B81D]
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:ToolGood.Words.PinyinMatch`1.SetKeywordsFunc(System.Func{`0,System.String})">
+            <summary>
+            设置获取关键字的方法
+            </summary>
+            <param name="keywordsFunc"></param>
+        </member>
+        <member name="M:ToolGood.Words.PinyinMatch`1.SetPinyinFunc(System.Func{`0,System.String})">
+            <summary>
+            设置获取拼音的方法
+            </summary>
+            <param name="pinyinFunc"></param>
+        </member>
+        <member name="M:ToolGood.Words.PinyinMatch`1.SetPinyinSplitChar(System.Char)">
+            <summary>
+            设置拼音分隔符
+            </summary>
+            <param name="splitChar"></param>
+        </member>
+        <member name="M:ToolGood.Words.PinyinMatch`1.Find(System.String)">
+            <summary>
+            查询 , 已知bug  keywords 不能太长
+            </summary>
+            <param name="keywords"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ToolGood.Words.PinyinMatch`1.FindWithSpace(System.String)">
+            <summary>
+            查询，空格为通配符  , 已知bug  keywords 不能太长
+            </summary>
+            <param name="keywords"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ToolGood.Words.StringMatch">
+            <summary>
+            文本搜索匹配, ,支持 部分 正则 如 . ? [ ] \ ( | ) ,不支持( )内再嵌套( )
+            </summary>
+        </member>
+        <member name="M:ToolGood.Words.StringMatch.FindFirst(System.String)">
+            <summary>
+            在文本中查找第一个关键字
+            </summary>
+            <param name="text">文本</param>
+            <returns></returns>
+        </member>
+        <member name="M:ToolGood.Words.StringMatch.FindAll(System.String)">
+            <summary>
+            在文本中查找所有的关键字
+            </summary>
+            <param name="text">文本</param>
+            <returns></returns>
+        </member>
+        <member name="M:ToolGood.Words.StringMatch.ContainsAny(System.String)">
+            <summary>
+            判断文本是否包含关键字
+            </summary>
+            <param name="text">文本</param>
+            <returns></returns>
+        </member>
+        <member name="M:ToolGood.Words.StringMatch.Replace(System.String,System.Char)">
+            <summary>
+            在文本中替换所有的关键字
+            </summary>
+            <param name="text">文本</param>
+            <param name="replaceChar">替换符</param>
+            <returns></returns>
+        </member>
+        <member name="M:ToolGood.Words.StringMatchEx.FindFirst(System.String)">
+            <summary>
+            在文本中查找第一个关键字
+            </summary>
+            <param name="text">文本</param>
+            <returns></returns>
+        </member>
+        <member name="M:ToolGood.Words.StringMatchEx.FindAll(System.String)">
+            <summary>
+            在文本中查找所有的关键字
+            </summary>
+            <param name="text">文本</param>
+            <returns></returns>
+        </member>
+        <member name="M:ToolGood.Words.StringMatchEx.ContainsAny(System.String)">
+            <summary>
+            判断文本是否包含关键字
+            </summary>
+            <param name="text">文本</param>
+            <returns></returns>
+        </member>
+        <member name="M:ToolGood.Words.StringMatchEx.Replace(System.String,System.Char)">
+            <summary>
+            在文本中替换所有的关键字
+            </summary>
+            <param name="text">文本</param>
+            <param name="replaceChar">替换符</param>
+            <returns></returns>
+        </member>
+        <member name="T:ToolGood.Words.WordsMatch">
+            <summary>
+            文本搜索匹配, 支持 部分 正则 如 . ? [ ] \ ( | ) ,不支持( )内再嵌套( )
+            </summary>
+        </member>
+        <member name="M:ToolGood.Words.WordsMatch.FindFirst(System.String)">
+            <summary>
+            在文本中查找第一个关键字
+            </summary>
+            <param name="text">文本</param>
+            <returns></returns>
+        </member>
+        <member name="M:ToolGood.Words.WordsMatch.FindAll(System.String)">
+            <summary>
+            在文本中查找所有的关键字
+            </summary>
+            <param name="text">文本</param>
+            <returns></returns>
+        </member>
+        <member name="M:ToolGood.Words.WordsMatch.ContainsAny(System.String)">
+            <summary>
+            判断文本是否包含关键字
+            </summary>
+            <param name="text">文本</param>
+            <returns></returns>
+        </member>
+        <member name="M:ToolGood.Words.WordsMatch.Replace(System.String,System.Char)">
+            <summary>
+            在文本中替换所有的关键字
+            </summary>
+            <param name="text">文本</param>
+            <param name="replaceChar">替换符</param>
+            <returns></returns>
+        </member>
+        <member name="M:ToolGood.Words.WordsMatchEx.FindFirst(System.String)">
+            <summary>
+            在文本中查找第一个关键字
+            </summary>
+            <param name="text">文本</param>
+            <returns></returns>
+        </member>
+        <member name="M:ToolGood.Words.WordsMatchEx.FindAll(System.String)">
+            <summary>
+            在文本中查找所有的关键字
+            </summary>
+            <param name="text">文本</param>
+            <returns></returns>
+        </member>
+        <member name="M:ToolGood.Words.WordsMatchEx.ContainsAny(System.String)">
+            <summary>
+            判断文本是否包含关键字
+            </summary>
+            <param name="text">文本</param>
+            <returns></returns>
+        </member>
+        <member name="M:ToolGood.Words.WordsMatchEx.Replace(System.String,System.Char)">
+            <summary>
+            在文本中替换所有的关键字
+            </summary>
+            <param name="text">文本</param>
+            <param name="replaceChar">替换符</param>
+            <returns></returns>
+        </member>
+        <member name="T:ToolGood.Words.SkipWordFilterHandler">
+            <summary>
+            过滤跳词
+            </summary>
+            <param name="c">当前字符</param>
+            <param name="text">查询字符串</param>
+            <param name="index">索引</param>
+            <returns>True 跳过，false 不跳过</returns>
+        </member>
+        <member name="T:ToolGood.Words.CharTranslateHandler">
+            <summary>
+            字符转化，可以设置繁简转化、忽略大小写
+            </summary>
+            <param name="c">当前字符</param>
+            <param name="text">查询字符串</param>
+            <param name="index">索引</param>
+            <returns>转化后的字符</returns>
+        </member>
+        <member name="T:ToolGood.Words.StringMatchHandler">
+            <summary>
+            自定义字符串匹配
+            </summary>
+            <param name="c">当前字符</param>
+            <param name="text">查询字符串</param>
+            <param name="start">开始索引</param>
+            <param name="end">结束索引</param>
+            <param name="keyword">查询到的关键字</param>
+            <param name="keywordIndex">关键字索引</param>
+            <param name="matchKeyword">匹配关键字</param>
+            <param name="blacklistIndex">黑名单序号</param>
+            <returns>返回true匹配成功；返回false匹配失败 </returns>
+        </member>
+        <member name="T:ToolGood.Words.IllegalWordsSearch">
+            <summary>
+            最新版本的IllegalWordsSearch， 与3.0.3.0以前的版本不兼容。
+            IllegalWordsSearch类太费精力了，头发稀疏了。
+            我未来可能以敏感词过滤做为创业项目，所以这是最后的开源版本，不再免费补bug了。
+            IllegalWordsSearch修复了2020-10-8日前所有bug。
+            </summary>
+        </member>
+        <member name="F:ToolGood.Words.IllegalWordsSearch.UseSkipWordFilter">
+            <summary>
+            使用跳词过滤器，默认使用
+            </summary> 
+        </member>
+        <member name="E:ToolGood.Words.IllegalWordsSearch.SkipWordFilter">
+            <summary>
+            过滤跳词
+            </summary>
+        </member>
+        <member name="E:ToolGood.Words.IllegalWordsSearch.CharTranslate">
+            <summary>
+            字符转化，可以设置繁简转化、忽略大小写，启用后UseIgnoreCase开启无效
+            若想使用CharTranslateHandler，请先添加事件CharTranslateHandler, 再用SetKeywords设置关键字
+            </summary>
+        </member>
+        <member name="E:ToolGood.Words.IllegalWordsSearch.StringMatch">
+            <summary>
+            自定义字符串匹配
+            </summary>
+        </member>
+        <member name="F:ToolGood.Words.IllegalWordsSearch.UseDuplicateWordFilter">
+            <summary>
+            使用重复词过滤，默认使用
+            在 SetKeywords 前使用
+            </summary>
+        </member>
+        <member name="F:ToolGood.Words.IllegalWordsSearch.UseDBCcaseConverter">
+            <summary>
+            使用半角转化器，默认使用，如果不使用关闭，请先UseDBCcaseConverter设置为false,再用SetKeywords设置关键字
+            </summary>
+        </member>
+        <member name="F:ToolGood.Words.IllegalWordsSearch.UseIgnoreCase">
+            <summary>
+            使用忽略大小写，默认使用，如果不使用关闭，请先UseIgnoreCase设置为false,再用SetKeywords设置关键字
+            </summary>
+        </member>
+        <member name="M:ToolGood.Words.IllegalWordsSearch.#ctor">
+            <summary>
+            最新版本的IllegalWordsSearch， 与3.0.3.0以前的版本不兼容
+            </summary>
+        </member>
+        <member name="M:ToolGood.Words.IllegalWordsSearch.SetSkipWords(System.String)">
+            <summary>
+            设置跳词
+            </summary>
+            <param name="skipList"></param>
+        </member>
+        <member name="M:ToolGood.Words.IllegalWordsSearch.SetKeywords(System.Collections.Generic.ICollection{System.String})">
+            <summary>
+            设置关键字
+            <para></para>
+            如果想使用CharTranslateHandler，请先添加事件CharTranslateHandler, 再用SetKeywords设置关键字
+            <para></para>
+            使用CharTranslateHandler后，UseIgnoreCase配置无效
+            <para></para>
+            如果不使用忽略大小写，请先UseIgnoreCase设置为false,再用SetKeywords设置关键字
+            </summary>
+            <param name="keywords"></param>
+        </member>
+        <member name="M:ToolGood.Words.IllegalWordsSearch.Load(System.IO.BinaryReader)">
+            <summary>
+            加载文件
+            </summary>
+        </member>
+        <member name="M:ToolGood.Words.IllegalWordsSearch.FindAll(System.String)">
+            <summary>
+            在文本中查找所有的关键字
+            </summary>
+            <param name="text">文本</param>
+            <returns></returns>
+        </member>
+        <member name="M:ToolGood.Words.IllegalWordsSearch.FindFirst(System.String)">
+            <summary>
+            在文本中查找第一个关键字
+            </summary>
+            <param name="text">文本</param>
+            <returns></returns>
+        </member>
+        <member name="M:ToolGood.Words.IllegalWordsSearch.ContainsAny(System.String)">
+            <summary>
+            判断文本是否包含关键字
+            </summary>
+            <param name="text">文本</param>
+            <returns></returns>
+        </member>
+        <member name="M:ToolGood.Words.IllegalWordsSearch.Replace(System.String,System.Char)">
+            <summary>
+            在文本中替换所有的关键字
+            </summary>
+            <param name="text">文本</param>
+            <param name="replaceChar">替换符</param>
+            <returns></returns>
+        </member>
+        <member name="M:ToolGood.Words.IllegalWordsSearch.CheckNextChar(System.String,System.Char,System.Int32)">
+            <summary>
+            当前字符为不是英文数字，则通过，返回true
+            审核下一个字符是否为英文数字，如果是,则返回 false
+            </summary>
+            <param name="text"></param>
+            <param name="c"></param>
+            <param name="end"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ToolGood.Words.IllegalWordsSearch.SetBlacklist(System.Int32[])">
+            <summary>
+            设置黑名单
+            </summary>
+            <param name="blacklist"></param>
+        </member>
+        <member name="P:ToolGood.Words.IllegalWordsSearchResult.Start">
+            <summary>
+            开始位置
+            </summary>
+        </member>
+        <member name="P:ToolGood.Words.IllegalWordsSearchResult.End">
+            <summary>
+            结束位置
+            </summary>
+        </member>
+        <member name="P:ToolGood.Words.IllegalWordsSearchResult.Keyword">
+            <summary>
+            原始文本
+            </summary>
+        </member>
+        <member name="P:ToolGood.Words.IllegalWordsSearchResult.Index">
+            <summary>
+            索引
+            </summary>
+        </member>
+        <member name="P:ToolGood.Words.IllegalWordsSearchResult.MatchKeyword">
+            <summary>
+            关键字
+            </summary>
+        </member>
+        <member name="P:ToolGood.Words.IllegalWordsSearchResult.BlacklistType">
+            <summary>
+            黑名单类型
+            </summary>
+        </member>
+        <member name="P:ToolGood.Words.WordsSearchResult.Start">
+            <summary>
+            开始位置
+            </summary>
+        </member>
+        <member name="P:ToolGood.Words.WordsSearchResult.End">
+            <summary>
+            结束位置
+            </summary>
+        </member>
+        <member name="P:ToolGood.Words.WordsSearchResult.Keyword">
+            <summary>
+            关键字
+            </summary>
+        </member>
+        <member name="P:ToolGood.Words.WordsSearchResult.Index">
+            <summary>
+            索引
+            </summary>
+        </member>
+        <member name="P:ToolGood.Words.WordsSearchResult.MatchKeyword">
+            <summary>
+            匹配关键字
+            </summary>
+        </member>
+        <member name="T:ToolGood.Words.StringSearch">
+            <summary>
+            文本搜索
+            性能从小到大  StringSearch &lt; StringSearchEx &lt; StringSearchEx2 &lt; StringSearchEx3
+            </summary>
+        </member>
+        <member name="M:ToolGood.Words.StringSearch.FindFirst(System.String)">
+            <summary>
+            在文本中查找第一个关键字
+            </summary>
+            <param name="text">文本</param>
+            <returns></returns>
+        </member>
+        <member name="M:ToolGood.Words.StringSearch.FindAll(System.String)">
+            <summary>
+            在文本中查找所有的关键字
+            </summary>
+            <param name="text">文本</param>
+            <returns></returns>
+        </member>
+        <member name="M:ToolGood.Words.StringSearch.ContainsAny(System.String)">
+            <summary>
+            判断文本是否包含关键字
+            </summary>
+            <param name="text">文本</param>
+            <returns></returns>
+        </member>
+        <member name="M:ToolGood.Words.StringSearch.Replace(System.String,System.Char)">
+            <summary>
+            在文本中替换所有的关键字
+            </summary>
+            <param name="text">文本</param>
+            <param name="replaceChar">替换符</param>
+            <returns></returns>
+        </member>
+        <member name="T:ToolGood.Words.StringSearchEx">
+            <summary>
+            文本搜索，内存版，保存快 
+            性能从小到大  StringSearch &lt; StringSearchEx &lt; StringSearchEx2 &lt; StringSearchEx3
+            </summary>
+        </member>
+        <member name="M:ToolGood.Words.StringSearchEx.FindAll(System.String)">
+            <summary>
+            在文本中查找所有的关键字
+            </summary>
+            <param name="text">文本</param>
+            <returns></returns>
+        </member>
+        <member name="M:ToolGood.Words.StringSearchEx.FindFirst(System.String)">
+            <summary>
+            在文本中查找第一个关键字
+            </summary>
+            <param name="text">文本</param>
+            <returns></returns>
+        </member>
+        <member name="M:ToolGood.Words.StringSearchEx.ContainsAny(System.String)">
+            <summary>
+            判断文本是否包含关键字
+            </summary>
+            <param name="text">文本</param>
+            <returns></returns>
+        </member>
+        <member name="M:ToolGood.Words.StringSearchEx.Replace(System.String,System.Char)">
+            <summary>
+            在文本中替换所有的关键字
+            </summary>
+            <param name="text">文本</param>
+            <param name="replaceChar">替换符</param>
+            <returns></returns>
+        </member>
+        <member name="T:ToolGood.Words.StringSearchEx2">
+            <summary>
+            文本搜索（增强版，速度更快），如果关键字太多(5W以上)，建议使用 StringSearchEx
+            性能从小到大  StringSearch &lt; StringSearchEx &lt; StringSearchEx2 &lt; StringSearchEx3
+            </summary>
+        </member>
+        <member name="M:ToolGood.Words.StringSearchEx2.FindAll(System.String)">
+            <summary>
+            在文本中查找所有的关键字
+            </summary>
+            <param name="text">文本</param>
+            <returns></returns>
+        </member>
+        <member name="M:ToolGood.Words.StringSearchEx2.FindFirst(System.String)">
+            <summary>
+            在文本中查找第一个关键字
+            </summary>
+            <param name="text">文本</param>
+            <returns></returns>
+        </member>
+        <member name="M:ToolGood.Words.StringSearchEx2.ContainsAny(System.String)">
+            <summary>
+            判断文本是否包含关键字
+            </summary>
+            <param name="text">文本</param>
+            <returns></returns>
+        </member>
+        <member name="M:ToolGood.Words.StringSearchEx2.Replace(System.String,System.Char)">
+            <summary>
+            在文本中替换所有的关键字
+            </summary>
+            <param name="text">文本</param>
+            <param name="replaceChar">替换符</param>
+            <returns></returns>
+        </member>
+        <member name="T:ToolGood.Words.StringSearchEx3">
+            <summary>
+            文本搜索（指针版，速度更快） ，如果关键字太多(5W以上)，建议使用 StringSearchEx
+            性能从小到大  StringSearch &lt; StringSearchEx &lt; StringSearchEx2 &lt; StringSearchEx3
+            </summary>
+        </member>
+        <member name="M:ToolGood.Words.StringSearchEx3.FindAll(System.String)">
+            <summary>
+            在文本中查找所有的关键字
+            </summary>
+            <param name="text">文本</param>
+            <returns></returns>
+        </member>
+        <member name="M:ToolGood.Words.StringSearchEx3.FindFirst(System.String)">
+            <summary>
+            在文本中查找第一个关键字
+            </summary>
+            <param name="text">文本</param>
+            <returns></returns>
+        </member>
+        <member name="M:ToolGood.Words.StringSearchEx3.ContainsAny(System.String)">
+            <summary>
+            判断文本是否包含关键字
+            </summary>
+            <param name="text">文本</param>
+            <returns></returns>
+        </member>
+        <member name="M:ToolGood.Words.StringSearchEx3.Replace(System.String,System.Char)">
+            <summary>
+            在文本中替换所有的关键字
+            </summary>
+            <param name="text">文本</param>
+            <param name="replaceChar">替换符</param>
+            <returns></returns>
+        </member>
+        <member name="T:ToolGood.Words.WordsSearch">
+            <summary>
+            文本搜索，带返回位置及索引号
+            性能从小到大  WordsSearch &lt; WordsSearchEx &lt; WordsSearchEx2 &lt; WordsSearchEx3
+            </summary>
+        </member>
+        <member name="M:ToolGood.Words.WordsSearch.ContainsAny(System.String)">
+            <summary>
+            判断文本是否包含关键字
+            </summary>
+            <param name="text">文本</param>
+            <returns></returns>
+        </member>
+        <member name="M:ToolGood.Words.WordsSearch.FindFirst(System.String)">
+            <summary>
+            在文本中查找第一个关键字
+            </summary>
+            <param name="text">文本</param>
+            <returns></returns>
+        </member>
+        <member name="M:ToolGood.Words.WordsSearch.FindAll(System.String)">
+            <summary>
+            在文本中查找所有的关键字
+            </summary>
+            <param name="text">文本</param>
+            <returns></returns>
+        </member>
+        <member name="M:ToolGood.Words.WordsSearch.Replace(System.String,System.Char)">
+            <summary>
+            在文本中替换所有的关键字
+            </summary>
+            <param name="text">文本</param>
+            <param name="replaceChar">替换符</param>
+            <returns></returns>
+        </member>
+        <member name="T:ToolGood.Words.WordsSearchEx">
+            <summary>
+            文本搜索，带返回位置及索引号，内存版，保存快，
+            性能从小到大  WordsSearch &lt; WordsSearchEx &lt; WordsSearchEx2 &lt; WordsSearchEx3
+            </summary>
+        </member>
+        <member name="M:ToolGood.Words.WordsSearchEx.FindAll(System.String)">
+            <summary>
+            在文本中查找所有的关键字
+            </summary>
+            <param name="text">文本</param>
+            <returns></returns>
+        </member>
+        <member name="M:ToolGood.Words.WordsSearchEx.FindFirst(System.String)">
+            <summary>
+            在文本中查找第一个关键字
+            </summary>
+            <param name="text">文本</param>
+            <returns></returns>
+        </member>
+        <member name="M:ToolGood.Words.WordsSearchEx.ContainsAny(System.String)">
+            <summary>
+            判断文本是否包含关键字
+            </summary>
+            <param name="text">文本</param>
+            <returns></returns>
+        </member>
+        <member name="M:ToolGood.Words.WordsSearchEx.Replace(System.String,System.Char)">
+            <summary>
+            在文本中替换所有的关键字
+            </summary>
+            <param name="text">文本</param>
+            <param name="replaceChar">替换符</param>
+            <returns></returns>
+        </member>
+        <member name="T:ToolGood.Words.WordsSearchEx2">
+            <summary>
+            文本搜索（增强版，速度更快），带返回位置及索引号  ，如果关键字太多(5W以上)，建议使用 WordsSearchEx
+            性能从小到大  WordsSearch &lt; WordsSearchEx &lt; WordsSearchEx2 &lt; WordsSearchEx3
+            </summary>
+        </member>
+        <member name="M:ToolGood.Words.WordsSearchEx2.FindAll(System.String)">
+            <summary>
+            在文本中查找所有的关键字
+            </summary>
+            <param name="text">文本</param>
+            <returns></returns>
+        </member>
+        <member name="M:ToolGood.Words.WordsSearchEx2.FindFirst(System.String)">
+            <summary>
+            在文本中查找第一个关键字
+            </summary>
+            <param name="text">文本</param>
+            <returns></returns>
+        </member>
+        <member name="M:ToolGood.Words.WordsSearchEx2.ContainsAny(System.String)">
+            <summary>
+            判断文本是否包含关键字
+            </summary>
+            <param name="text">文本</param>
+            <returns></returns>
+        </member>
+        <member name="M:ToolGood.Words.WordsSearchEx2.Replace(System.String,System.Char)">
+            <summary>
+            在文本中替换所有的关键字
+            </summary>
+            <param name="text">文本</param>
+            <param name="replaceChar">替换符</param>
+            <returns></returns>
+        </member>
+        <member name="T:ToolGood.Words.WordsSearchEx3">
+            <summary>
+            文本搜索（指针版，速度更快），带返回位置及索引号 ，如果关键字太多(5W以上)，建议使用 BigWordsSearchEx
+            性能从小到大  WordsSearch &lt; WordsSearchEx &lt; WordsSearchEx2 &lt; WordsSearchEx3
+            </summary>
+        </member>
+        <member name="M:ToolGood.Words.WordsSearchEx3.FindAll(System.String)">
+            <summary>
+            在文本中查找所有的关键字
+            </summary>
+            <param name="text">文本</param>
+            <returns></returns>
+        </member>
+        <member name="M:ToolGood.Words.WordsSearchEx3.FindFirst(System.String)">
+            <summary>
+            在文本中查找第一个关键字
+            </summary>
+            <param name="text">文本</param>
+            <returns></returns>
+        </member>
+        <member name="M:ToolGood.Words.WordsSearchEx3.ContainsAny(System.String)">
+            <summary>
+            判断文本是否包含关键字
+            </summary>
+            <param name="text">文本</param>
+            <returns></returns>
+        </member>
+        <member name="M:ToolGood.Words.WordsSearchEx3.Replace(System.String,System.Char)">
+            <summary>
+            在文本中替换所有的关键字
+            </summary>
+            <param name="text">文本</param>
+            <param name="replaceChar">替换符</param>
+            <returns></returns>
+        </member>
+        <member name="M:ToolGood.Words.WordsHelper.GetAllPinyin(System.Char,System.Boolean)">
+            <summary>
+            获取所有拼音,中文字符集为[0x3400,0x9FD5]，注：偏僻汉字很多未验证
+            </summary>
+            <param name="c">原文本</param>
+            <param name="tone">是否带声调</param>
+            <returns></returns>
+        </member>
+        <member name="M:ToolGood.Words.WordsHelper.GetPinyinFast(System.String,System.Boolean)">
+            <summary>
+            获取拼音全拼, 不支持多音,中文字符集为[0x3400,0x9FD5]，注：偏僻汉字很多未验证
+            </summary>
+            <param name="text">原文本</param>
+            <param name="tone">是否带声调</param>
+            <returns></returns>
+        </member>
+        <member name="M:ToolGood.Words.WordsHelper.GetFirstPinyin(System.String)">
+            <summary>
+            获取首字母，中文字符集为[0x3400,0x9FD5],[0x20000-0x2B81D]，注：偏僻汉字很多未验证
+            </summary>
+            <param name="text">原文本</param>
+            <returns></returns>
+        </member>
+        <member name="M:ToolGood.Words.WordsHelper.GetPinyin(System.String,System.Boolean)">
+            <summary>
+            获取拼音全拼,支持多音,中文字符集为[0x4E00,0x9FD5],[0x20000-0x2B81D]，注：偏僻汉字很多未验证
+            </summary>
+            <param name="text">原文本</param>
+            <param name="tone">是否带声调</param>
+            <returns></returns>
+        </member>
+        <member name="M:ToolGood.Words.WordsHelper.GetPinyin(System.String,System.String,System.Boolean)">
+            <summary>
+            获取拼音全拼,支持多音,中文字符集为[0x4E00,0x9FD5],[0x20000-0x2B81D]，注：偏僻汉字很多未验证
+            </summary>
+            <param name="text">原文本</param>
+            <param name="splitSpan">分隔符</param>
+            <param name="tone">是否带声调</param>
+            <returns></returns>
+        </member>
+        <member name="M:ToolGood.Words.WordsHelper.GetPinyinList(System.String,System.Boolean)">
+            <summary>
+            获取拼音全拼,支持多音,中文字符集为[0x4E00,0x9FD5],[0x20000-0x2B81D]，注：偏僻汉字很多未验证
+            </summary>
+            <param name="text">原文本</param>
+            <param name="tone">是否带声调</param>
+            <returns></returns>
+        </member>
+        <member name="M:ToolGood.Words.WordsHelper.GetPinyinForName(System.String,System.Boolean)">
+            <summary>
+            获取姓名拼音,中文字符集为[0x3400,0x9FD5],[0x20000-0x2B81D]，注：偏僻汉字很多未验证
+            </summary>
+            <param name="name">姓名</param>
+            <param name="tone">是否带声调</param>
+            <returns></returns>
+        </member>
+        <member name="M:ToolGood.Words.WordsHelper.GetPinyinForName(System.String,System.String,System.Boolean)">
+            <summary>
+            获取姓名拼音,中文字符集为[0x3400,0x9FD5],[0x20000-0x2B81D]，注：偏僻汉字很多未验证
+            </summary>
+            <param name="name">姓名</param>
+            <param name="splitSpan">分隔符</param>
+            <param name="tone">是否带声调</param>
+            <returns></returns>
+        </member>
+        <member name="M:ToolGood.Words.WordsHelper.GetPinyinListForName(System.String,System.Boolean)">
+            <summary>
+            获取姓名拼音,中文字符集为[0x3400,0x9FD5],[0x20000-0x2B81D]，注：偏僻汉字很多未验证
+            </summary>
+            <param name="name">姓名</param>
+            <param name="tone">是否带声调</param>
+            <returns></returns>
+        </member>
+        <member name="M:ToolGood.Words.WordsHelper.HasChinese(System.String)">
+            <summary>
+            判断输入是否为中文  ,中文字符集为[0x4E00,0x9FA5][0x3400,0x4db5]
+            </summary>
+            <param name="content"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ToolGood.Words.WordsHelper.IsAllChinese(System.String)">
+            <summary>
+            判断输入是否全为中文,中文字符集为[0x4E00,0x9FA5][0x3400,0x4db5]
+            </summary>
+            <param name="content"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ToolGood.Words.WordsHelper.HasEnglish(System.String)">
+            <summary>
+            判断含有英语
+            </summary>
+            <param name="content"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ToolGood.Words.WordsHelper.IsAllEnglish(System.String)">
+            <summary>
+            判断是否全部英语
+            </summary>
+            <param name="content"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ToolGood.Words.WordsHelper.ToSBC(System.String)">
+            <summary>
+            半角转全角
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ToolGood.Words.WordsHelper.ToDBC(System.String)">
+            <summary>
+            转半角的函数
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ToolGood.Words.WordsHelper.ToTraditionalChinese(System.String,System.Int32)">
+            <summary>
+            转繁体中文
+            </summary>
+            <param name="text"></param>
+            <param name="type">0、繁体中文，1、港澳繁体，2、台湾正体 </param>
+            <returns></returns>
+        </member>
+        <member name="M:ToolGood.Words.WordsHelper.ToSimplifiedChinese(System.String,System.Int32)">
+            <summary>
+            转简体中文
+            </summary>
+            <param name="text"></param>
+            <param name="srcType">0、繁体中文，1、港澳繁体，2、台湾正体</param>
+            <returns></returns>
+        </member>
+        <member name="M:ToolGood.Words.WordsHelper.ToChineseRMB(System.Double)">
+            <summary>
+            数字转中文大写
+            </summary>
+            <param name="x"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ToolGood.Words.WordsHelper.ToNumber(System.String)">
+            <summary>
+            中文转数字（支持中文大写）
+            </summary>
+            <param name="chineseString"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
