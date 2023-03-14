@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20fd932914f92c744ac4bc0a2095a203, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayMode: 1
+  PlayMode: 0
   DefaultHostServer: http://192.168.3.3/Package/
   FallbackHostServer: http://192.168.3.3/Package/
   HotDllName: Hotfix.dll
@@ -206,7 +206,7 @@ MonoBehaviour:
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 55
 --- !u!114 &27063313
 MonoBehaviour:
   m_ObjectHideFlags: 0
